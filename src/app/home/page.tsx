@@ -128,12 +128,17 @@ export default function HomePage() {
                 <span className={styles.statLabel}>Elite Tutors</span>
               </div>
             </div>
-            <Link href="#tutors" className={styles.ctaButton}>
-              Meet Our Tutors
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </Link>
+            <div className={styles.heroButtons}>
+              <Link href="/book" className={styles.ctaButtonPrimary}>
+                Book Your First Class Now
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </Link>
+              <Link href="#tutors" className={styles.ctaButtonSecondary}>
+                Meet Our Tutors
+              </Link>
+            </div>
           </div>
         </div>
         <div className={styles.scrollIndicator} aria-hidden="true">

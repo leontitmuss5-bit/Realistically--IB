@@ -1,0 +1,116 @@
+/* ===== Design Tokens ===== */
+:root {
+  /* Core Colors - Black & White */
+  --color-bg-primary: #fafafa;
+  --color-bg-secondary: #f5f5f5;
+  --color-bg-card: #ffffff;
+  --color-bg-black: #0e0e0e;
+  --color-text-primary: #0e0e0e;
+  --color-text-secondary: #555555;
+  --color-text-muted: #888888;
+  --color-accent: #0e0e0e;
+  --color-accent-secondary: #2a2a2a;
+  --color-border: #e0e0e0;
+  --color-border-dark: #0e0e0e;
+  --color-border-subtle: #ebebeb;
+
+  /* Yellow/Orange Accent - Vibrant Gradient Glow System */
+  --accent-yellow: #F5C842;
+  --accent-orange: #FF8C42;
+  --accent-warm: #FFAA33;
+  --accent-yellow-rgb: 245, 200, 66;
+  --accent-orange-rgb: 255, 140, 66;
+  --accent-warm-rgb: 255, 170, 51;
+  
+  /* Dramatic visible glows */
+  --glow-yellow-sm: 0 0 20px rgba(245, 200, 66, 0.4), 0 0 40px rgba(255, 140, 66, 0.2);
+  --glow-yellow-md: 0 0 30px rgba(245, 200, 66, 0.5), 0 0 60px rgba(255, 140, 66, 0.25), 0 0 100px rgba(255, 170, 51, 0.15);
+  --glow-yellow-lg: 0 0 50px rgba(245, 200, 66, 0.6), 0 0 100px rgba(255, 140, 66, 0.3), 0 0 150px rgba(255, 170, 51, 0.2);
+  --glow-yellow-xl: 0 0 80px rgba(245, 200, 66, 0.5), 0 0 150px rgba(255, 140, 66, 0.3), 0 0 200px rgba(255, 170, 51, 0.2);
+  --glow-focus: 0 0 0 2px rgba(245, 200, 66, 0.5), 0 0 30px rgba(245, 200, 66, 0.4), 0 0 60px rgba(255, 140, 66, 0.2);
+  
+  /* Gradient backgrounds */
+  --gradient-glow: radial-gradient(circle, rgba(245, 200, 66, 0.4) 0%, rgba(255, 140, 66, 0.2) 40%, transparent 70%);
+  --gradient-glow-soft: radial-gradient(circle, rgba(245, 200, 66, 0.25) 0%, rgba(255, 140, 66, 0.12) 40%, transparent 65%);
+  --gradient-warm: linear-gradient(135deg, var(--accent-yellow) 0%, var(--accent-orange) 100%);
+  
+  /* Tinge for hover states */
+  --accent-yellow-tinge: rgba(245, 200, 66, 0.08);
+  --accent-yellow-highlight: rgba(245, 200, 66, 0.15);
+
+  /* Typography */
+  --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-mono: 'Courier New', monospace;
+  
+  --font-size-xs: 0.65rem;
+  --font-size-sm: 0.85rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.1rem;
+  --font-size-xl: 1.3rem;
+  --font-size-2xl: 1.8rem;
+  --font-size-3xl: 2.5rem;
+  --font-size-4xl: 3.5rem;
+  --font-size-5xl: 6.5rem;
+
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+
+  --line-height-tight: 1.1;
+  --line-height-base: 1.7;
+  --line-height-relaxed: 1.8;
+
+  --letter-spacing-tight: -0.03em;
+  --letter-spacing-normal: 0.01em;
+  --letter-spacing-wide: 0.1em;
+  --letter-spacing-wider: 0.15em;
+
+  /* Spacing Scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  /* Container */
+  --container-max: 1400px;
+  --container-padding: 80px;
+  --container-padding-mobile: 30px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+
+  /* Z-index */
+  --z-nav: 1000;
+}
+
+/* Responsive token overrides */
+@media (max-width: 1024px) {
+  :root {
+    --container-padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 30px;
+    --font-size-5xl: 2.5rem;
+    --font-size-4xl: 2rem;
+    --font-size-3xl: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --container-padding: 20px;
+  }
+}

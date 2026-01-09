@@ -47,26 +47,23 @@ const TUTORS = [
   {
     id: 'leon',
     name: 'Leon Titmuss',
-    initials: 'LT',
+    photo: '/images/leon.jpeg',
     ibas: '42.75',
     atar: '98.8',
-    bio: 'Competed with Sydney Swans Academy U18s National Team throughout IB. Specializes in balancing elite sport and study.',
   },
   {
     id: 'patrick',
     name: 'Patrick Jones',
-    initials: 'PJ',
+    photo: '/images/paddy.jpeg',
     ibas: '45.5',
     atar: '99.95',
-    bio: 'Near-perfect IB score while competing in weekly golf tournaments. Expert in high-stakes performance optimization.',
   },
   {
     id: 'william',
     name: 'William Hardy',
-    initials: 'WH',
+    photo: '/images/will.jpeg',
     ibas: '43.5',
     atar: '99.3',
-    bio: 'Competed at national level cricket during IB. Master of time management and strategic exam preparation.',
   },
 ];
 
@@ -202,32 +199,37 @@ export default function HomePage() {
           </header>
           <div className={styles.tutorsGrid}>
             {TUTORS.map((tutor) => (
-              <Link
-                key={tutor.id}
-                href={`/tutors/${tutor.id}`}
-                className={styles.tutorCardLink}
-              >
-                <article className={styles.tutorCard}>
-                  <div className={styles.tutorImage}>
-                    <div className={styles.tutorPlaceholder}>{tutor.initials}</div>
-                  </div>
-                  <div className={styles.tutorInfo}>
-                    <h3>{tutor.name}</h3>
-                    <div className={styles.tutorScores}>
-                      <div className={styles.score}>
-                        <span className={styles.scoreValue}>{tutor.ibas}</span>
-                        <span className={styles.scoreLabel}>IBAS</span>
-                      </div>
-                      <div className={styles.scoreDivider} aria-hidden="true" />
-                      <div className={styles.score}>
-                        <span className={styles.scoreValue}>{tutor.atar}</span>
-                        <span className={styles.scoreLabel}>ATAR</span>
-                      </div>
+              <article key={tutor.id} className={styles.tutorCard}>
+                <div className={styles.tutorImage}>
+                  <Image
+                    src={tutor.photo}
+                    alt={tutor.name}
+                    width={180}
+                    height={180}
+                    className={styles.tutorPhoto}
+                  />
+                </div>
+                <div className={styles.tutorInfo}>
+                  <h3>{tutor.name}</h3>
+                  <div className={styles.tutorScores}>
+                    <div className={styles.score}>
+                      <span className={styles.scoreValue}>{tutor.ibas}</span>
+                      <span className={styles.scoreLabel}>IBAS</span>
                     </div>
-                    <p className={styles.tutorBio}>{tutor.bio}</p>
+                    <div className={styles.scoreDivider} aria-hidden="true" />
+                    <div className={styles.score}>
+                      <span className={styles.scoreValue}>{tutor.atar}</span>
+                      <span className={styles.scoreLabel}>ATAR</span>
+                    </div>
                   </div>
-                </article>
-              </Link>
+                  <Link href={`/tutors/${tutor.id}`} className={styles.tutorButton}>
+                    More about {tutor.name.split(' ')[0]}
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </div>
+              </article>
             ))}
           </div>
         </div>

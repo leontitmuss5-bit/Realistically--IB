@@ -397,11 +397,7 @@
   align-items: start;
 }
 
-.tutorCardLink {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-}
+/* tutorCardLink removed - using direct card with button */
 
 .tutorCard {
   background: transparent;
@@ -453,6 +449,52 @@
   font-weight: var(--font-weight-light);
   letter-spacing: 0.05em;
   border: 1px solid var(--color-text-primary);
+}
+
+.tutorPhoto {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  opacity: 0.85;
+  filter: grayscale(20%);
+  transition: all 0.4s ease;
+  border: 2px solid var(--color-border);
+}
+
+.tutorCard:hover .tutorPhoto {
+  opacity: 1;
+  filter: grayscale(0%);
+  border-color: rgba(245, 200, 66, 0.5);
+  box-shadow: 0 0 30px rgba(245, 200, 66, 0.3), 0 0 60px rgba(255, 140, 66, 0.15);
+}
+
+.tutorButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  background: transparent;
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-normal);
+  font-size: var(--font-size-sm);
+  transition: all 0.4s ease;
+  border: 1px solid var(--color-border);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  margin-top: var(--space-8);
+}
+
+.tutorButton:hover {
+  background: var(--color-text-primary);
+  color: var(--color-bg-primary);
+  border-color: var(--color-text-primary);
+  box-shadow: 0 0 25px rgba(245, 200, 66, 0.3), 0 0 50px rgba(255, 140, 66, 0.15);
+}
+
+.tutorButton:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(245, 200, 66, 0.5), 0 0 25px rgba(245, 200, 66, 0.3);
 }
 
 .tutorInfo h3 {

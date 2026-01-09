@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Metadata } from 'next';
 import styles from '../tutor.module.css';
 
@@ -25,7 +26,13 @@ export default function PatrickPage() {
         
         <header className={styles.profileHeader}>
           <div className={styles.profileImage}>
-            <div className={styles.placeholder}>PJ</div>
+            <Image
+              src="/images/paddy.jpeg"
+              alt="Patrick Jones"
+              width={200}
+              height={200}
+              className={styles.profilePhoto}
+            />
           </div>
           <div className={styles.profileInfo}>
             <h1>Patrick Jones</h1>

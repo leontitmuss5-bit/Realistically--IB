@@ -30,7 +30,7 @@ export default function BookPage() {
       <div className={styles.calendlyWrapper}>
         <div
           className="calendly-inline-widget"
-          data-url="https://calendly.com/leontitmuss5/30min?hide_gdpr_banner=1&background_color=0e0e0e&text_color=fafafa&primary_color=f5c842"
+          data-url="https://calendly.com/contactrealib/1hour?hide_gdpr_banner=1&background_color=ffffff&text_color=1a1a1a&primary_color=f5c842"
           style={{
             minWidth: '320px',
             height: '700px',

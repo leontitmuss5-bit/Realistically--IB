@@ -5,7 +5,7 @@ import styles from '../tutor.module.css';
 
 export const metadata: Metadata = {
   title: 'William Hardy',
-  description: 'William Hardy - Real IB Tutor. IBAS: 43.5, ATAR: 99.3. Cricket NSW Academy member.',
+  description: 'William Hardy - Real IB Tutor. IBAS: 43.75, ATAR: 99.35. Cricket NSW Academy member.',
 };
 
 const SUBJECT_SCORES = [
@@ -62,12 +62,12 @@ export default function WilliamPage() {
             <h1>William Hardy</h1>
             <div className={styles.scores}>
               <div className={styles.score}>
-                <span className={styles.scoreValue}>43.5</span>
+                <span className={styles.scoreValue}>43.75</span>
                 <span className={styles.scoreLabel}>IBAS</span>
               </div>
               <div className={styles.scoreDivider} aria-hidden="true" />
               <div className={styles.score}>
-                <span className={styles.scoreValue}>99.3</span>
+                <span className={styles.scoreValue}>99.35</span>
                 <span className={styles.scoreLabel}>ATAR</span>
               </div>
             </div>

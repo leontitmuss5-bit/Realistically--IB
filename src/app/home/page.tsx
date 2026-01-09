@@ -62,8 +62,8 @@ const TUTORS = [
     id: 'william',
     name: 'William Hardy',
     photo: '/images/will.jpeg',
-    ibas: '43.5',
-    atar: '99.3',
+    ibas: '43.75',
+    atar: '99.35',
   },
 ];
 

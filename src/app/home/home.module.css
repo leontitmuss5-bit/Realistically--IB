@@ -12,38 +12,55 @@
 
 .heroBgAnimated {
   position: absolute;
-  width: 22%;
-  height: 25%;
+  width: 35%;
+  height: 30%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.08;
+  opacity: 0.06;
   z-index: 0;
   will-change: transform;
   contain: layout style paint;
 }
 
-/* Images with staggered timing to minimize overlap - each image gets ~16s of travel time before next starts */
-.heroBg1 { bottom: 12%; left: 0; animation: slideRightLoop 180s linear infinite; animation-delay: 0s; }
-.heroBg2 { top: 15%; right: 0; animation: slideLeftLoop 180s linear infinite; animation-delay: -8s; }
-.heroBg3 { bottom: 10%; left: 0; animation: slideRightLoop 180s linear infinite; animation-delay: -16s; }
-.heroBg4 { top: 12%; right: 0; animation: slideLeftLoop 180s linear infinite; animation-delay: -24s; }
-.heroBg5 { bottom: 14%; left: 0; animation: slideRightLoop 180s linear infinite; animation-delay: -32s; }
-.heroBg6 { top: 10%; right: 0; animation: slideLeftLoop 180s linear infinite; animation-delay: -40s; }
-.heroBg7 { bottom: 13%; left: 0; animation: slideRightLoop 180s linear infinite; animation-delay: -48s; }
-.heroBg8 { top: 14%; right: 0; animation: slideLeftLoop 180s linear infinite; animation-delay: -56s; }
-.heroBg9 { bottom: 11%; left: 0; animation: slideRightLoop 180s linear infinite; animation-delay: -64s; }
-.heroBg10 { top: 13%; right: 0; animation: slideLeftLoop 180s linear infinite; animation-delay: -72s; }
-.heroBg11 { bottom: 9%; left: 0; animation: slideRightLoop 180s linear infinite; animation-delay: -80s; }
+/* Images spaced out with long delays - only 2-3 images visible at once, some starting mid-page */
+/* Bottom row: slides right */
+.heroBg1 { bottom: 10%; left: 0; animation: slideRightLoop 60s linear infinite; animation-delay: 0s; }
+.heroBg3 { bottom: 10%; left: 0; animation: slideRightLoop 60s linear infinite; animation-delay: -20s; }
+.heroBg5 { bottom: 10%; left: 0; animation: slideRightLoop 60s linear infinite; animation-delay: -40s; }
+
+/* Top row: slides left */
+.heroBg2 { top: 12%; right: 0; animation: slideLeftLoop 60s linear infinite; animation-delay: -10s; }
+.heroBg4 { top: 12%; right: 0; animation: slideLeftLoop 60s linear infinite; animation-delay: -30s; }
+.heroBg6 { top: 12%; right: 0; animation: slideLeftLoop 60s linear infinite; animation-delay: -50s; }
+
+/* Middle starters - begin from center of page */
+.heroBg7 { bottom: 10%; left: 0; animation: slideRightFromMiddle 30s linear infinite; animation-delay: 0s; }
+.heroBg8 { top: 12%; right: 0; animation: slideLeftFromMiddle 30s linear infinite; animation-delay: -15s; }
+
+/* Hidden - not used to reduce clutter */
+.heroBg9 { display: none; }
+.heroBg10 { display: none; }
+.heroBg11 { display: none; }
 
 @keyframes slideRightLoop {
-  0% { transform: translateX(-25%); }
-  100% { transform: translateX(125%); }
+  0% { transform: translateX(-40%); }
+  100% { transform: translateX(150%); }
 }
 
 @keyframes slideLeftLoop {
-  0% { transform: translateX(25%); }
-  100% { transform: translateX(-125%); }
+  0% { transform: translateX(40%); }
+  100% { transform: translateX(-150%); }
+}
+
+@keyframes slideRightFromMiddle {
+  0% { transform: translateX(50%); }
+  100% { transform: translateX(150%); }
+}
+
+@keyframes slideLeftFromMiddle {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(-150%); }
 }
 
 .heroContent {

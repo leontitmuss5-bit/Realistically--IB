@@ -156,15 +156,15 @@ export default function HomePage() {
           </header>
           <div className={styles.aboutWrapper}>
             <div className={styles.aboutContent}>
-              <p>
-                During our own IB journeys, we quickly realised how different the program was from the HSC our friends were studying. The IB has its own philosophy, logic, and approach to learning. It was one that isn&apos;t always intuitive at first.
-              </p>
-              <p>
-                Balancing the demands of the IB with already full schedules pushed us to develop our own study methods. We focused on streamlining the our learning processes, making our study time more effective, and, importantly, more enjoyable.
-              </p>
-              <p>
-                When those methods began to pay off, we decided to startup Real IB Tutoring. We created it to support students in the same position we once were by providing the tools, strategies, and guidance they need to excel in the IB, without having to sacrifice the things they love. We know that the cliche &quot;Study Smarter, Not Harder&quot; is one that every student wants but struggles to achieve, our ultimate goal is to simplify that process.
-              </p>
+<p>
+              During our own IB journeys, we quickly realised how different the program was from the HSC our friends were studying. The IB has its own philosophy, logic, and approach to learning. It was one that isn&apos;t always intuitive at first.
+            </p>
+            <p>
+              Balancing the demands of the IB with already full schedules pushed us to develop our own study methods. We focused on streamlining our learning processes, making our study time more effective, and, importantly, more enjoyable.
+            </p>
+            <p>
+              When those methods began to pay off, we decided to startup Real IB Tutoring. We created it to support students in the same position we once were by providing the tools, strategies, and guidance they need to excel in the IB, without having to sacrifice the things they love. We know that the cliche &quot;Study Smarter, Not Harder&quot; is one that every student wants but struggles to achieve, our ultimate goal is to simplify that process.
+            </p>
             </div>
             <div className={styles.aboutImage}>
               <Image

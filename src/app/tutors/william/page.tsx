@@ -19,6 +19,7 @@ const SUBJECT_SCORES = [
 ];
 
 const IA_ACHIEVEMENTS = [
+  { score: '=#1', label: 'Rank in Mathematics AA SL at Newington College' },
   { score: '39/40', label: 'English IO' },
   { score: '9/10', label: 'TOK Essay' },
   { score: '23/25', label: 'Geography IA' },

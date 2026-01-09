@@ -12,38 +12,38 @@
 
 .heroBgAnimated {
   position: absolute;
-  width: 35%;
-  height: 30%;
+  width: 22%;
+  height: 25%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.06;
+  opacity: 0.08;
   z-index: 0;
   will-change: transform;
   contain: layout style paint;
 }
 
-/* Images start visible on page with GPU-accelerated transforms */
-.heroBg1 { bottom: 12%; left: 0; animation: slideRightLoop 35s linear infinite; animation-delay: -5s; }
-.heroBg2 { top: 15%; right: 0; animation: slideLeftLoop 38s linear infinite; animation-delay: -10s; }
-.heroBg3 { bottom: 10%; left: 0; animation: slideRightLoop 40s linear infinite; animation-delay: -20s; }
-.heroBg4 { top: 12%; right: 0; animation: slideLeftLoop 36s linear infinite; animation-delay: -15s; }
-.heroBg5 { bottom: 14%; left: 0; animation: slideRightLoop 42s linear infinite; animation-delay: -30s; }
-.heroBg6 { top: 10%; right: 0; animation: slideLeftLoop 39s linear infinite; animation-delay: -25s; }
-.heroBg7 { bottom: 13%; left: 0; animation: slideRightLoop 37s linear infinite; animation-delay: -12s; }
-.heroBg8 { top: 14%; right: 0; animation: slideLeftLoop 41s linear infinite; animation-delay: -8s; }
-.heroBg9 { bottom: 11%; left: 0; animation: slideRightLoop 38s linear infinite; animation-delay: -18s; }
-.heroBg10 { top: 13%; right: 0; animation: slideLeftLoop 40s linear infinite; animation-delay: -22s; }
-.heroBg11 { bottom: 9%; left: 0; animation: slideRightLoop 36s linear infinite; animation-delay: -28s; }
+/* Images with staggered timing to minimize overlap - each image gets ~16s of travel time before next starts */
+.heroBg1 { bottom: 12%; left: 0; animation: slideRightLoop 180s linear infinite; animation-delay: 0s; }
+.heroBg2 { top: 15%; right: 0; animation: slideLeftLoop 180s linear infinite; animation-delay: -8s; }
+.heroBg3 { bottom: 10%; left: 0; animation: slideRightLoop 180s linear infinite; animation-delay: -16s; }
+.heroBg4 { top: 12%; right: 0; animation: slideLeftLoop 180s linear infinite; animation-delay: -24s; }
+.heroBg5 { bottom: 14%; left: 0; animation: slideRightLoop 180s linear infinite; animation-delay: -32s; }
+.heroBg6 { top: 10%; right: 0; animation: slideLeftLoop 180s linear infinite; animation-delay: -40s; }
+.heroBg7 { bottom: 13%; left: 0; animation: slideRightLoop 180s linear infinite; animation-delay: -48s; }
+.heroBg8 { top: 14%; right: 0; animation: slideLeftLoop 180s linear infinite; animation-delay: -56s; }
+.heroBg9 { bottom: 11%; left: 0; animation: slideRightLoop 180s linear infinite; animation-delay: -64s; }
+.heroBg10 { top: 13%; right: 0; animation: slideLeftLoop 180s linear infinite; animation-delay: -72s; }
+.heroBg11 { bottom: 9%; left: 0; animation: slideRightLoop 180s linear infinite; animation-delay: -80s; }
 
 @keyframes slideRightLoop {
-  0% { transform: translateX(-35%); }
-  100% { transform: translateX(140%); }
+  0% { transform: translateX(-25%); }
+  100% { transform: translateX(125%); }
 }
 
 @keyframes slideLeftLoop {
-  0% { transform: translateX(35%); }
-  100% { transform: translateX(-140%); }
+  0% { transform: translateX(25%); }
+  100% { transform: translateX(-125%); }
 }
 
 .heroContent {
@@ -559,10 +559,17 @@
   background: var(--color-bg-secondary);
 }
 
-.aboutContent {
-  max-width: 800px;
+.aboutWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  max-width: 1200px;
   margin: 0 auto;
-  text-align: center;
+}
+
+.aboutContent {
+  text-align: left;
 }
 
 .aboutContent p {
@@ -575,6 +582,30 @@
 
 .aboutContent p:last-child {
   margin-bottom: 0;
+}
+
+.aboutImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.groupPhoto {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  border-radius: 8px;
+  opacity: 0.9;
+  filter: grayscale(15%);
+  transition: all 0.4s ease;
+  border: 2px solid var(--color-border);
+}
+
+.groupPhoto:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+  border-color: rgba(245, 200, 66, 0.4);
+  box-shadow: 0 0 30px rgba(245, 200, 66, 0.25), 0 0 60px rgba(255, 140, 66, 0.15);
 }
 
 /* ===== Subjects Section ===== */
@@ -905,6 +936,15 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 60px;
   }
+
+  .aboutWrapper {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .aboutContent {
+    text-align: center;
+  }
 }
 
 @media (max-width: 768px) {
@@ -941,6 +981,19 @@
   
   .subjectsGrid {
     grid-template-columns: 1fr;
+  }
+
+  .aboutWrapper {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .aboutContent {
+    text-align: center;
+  }
+
+  .groupPhoto {
+    max-width: 350px;
   }
 }
 

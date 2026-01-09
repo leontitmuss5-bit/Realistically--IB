@@ -16,6 +16,7 @@ const SUBJECT_SCORES = [
 ];
 
 const ASSESSMENT_ACCOLADES = [
+  { score: '#1', label: 'Rank in Geography HL at Newington College' },
   { score: '19/20', label: 'English Language and Literature HL Essay' },
   { score: '18/20', label: 'Mathematics AA SL IA' },
   { score: '27/30', label: 'Biology Paper 1' },

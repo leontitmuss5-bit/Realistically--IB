@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './home.module.css';
+import Countdown from '@/components/Countdown';
 
 const HERO_IMAGES = [
   '/images/507AE7AF-2266-46AE-88A7-3072F4CB2712.jpeg',
@@ -285,7 +286,7 @@ export default function HomePage() {
               <header className={styles.pricingHeader}>
                 <h3>Casual 1-on-1 Tutoring</h3>
                 <div className={styles.pricingAmount}>
-                  <span className={styles.priceValue}>$65</span>
+                  <span className={styles.priceValue}>$75</span>
                   <span className={styles.pricePeriod}>/ hour</span>
                 </div>
               </header>
@@ -298,27 +299,30 @@ export default function HomePage() {
               </Link>
             </article>
 
-            {/* IB Term Accelerator */}
+            {/* IB Term Accelerator - Limited Offer */}
             <article className={`${styles.pricingCard} ${styles.featured}`}>
-              <span className={styles.recommendedBadge}>Most Popular</span>
+              <span className={styles.limitedBadge}>🔥 Limited Time Offer</span>
               <header className={styles.pricingHeader}>
                 <h3>IB Term Accelerator</h3>
                 <div className={styles.pricingAmount}>
-                  <span className={styles.priceValue}>$500</span>
+                  <span className={styles.priceStrikethrough}>$600</span>
+                  <span className={styles.priceValue}>$550</span>
                   <span className={styles.pricePeriod}>/ term</span>
                 </div>
-                <span className={styles.priceEquivalent}>Equivalent of $50 per session</span>
+                <span className={styles.priceSavings}>Save $50 — Introductory Offer</span>
               </header>
               <div className={styles.pricingDivider} aria-hidden="true" />
-              <p className={styles.pricingTagline}>Our most popular option for consistent improvement.</p>
+              <p className={styles.pricingTagline}>Everything you need to excel in Year 11 or 12 IB.</p>
               <ul className={styles.pricingFeatures}>
-                <li>10 weeks</li>
-                <li>1× 60-minute session per week</li>
-                <li>Personalised study planning</li>
+                <li><strong>BONUS:</strong> 1-hour study plan & schedule setup session</li>
+                <li>10 weekly 60-minute tutoring sessions</li>
+                <li>Personalised practice papers</li>
+                <li>Comprehensive subject notes</li>
                 <li>Exam-focused strategy and feedback</li>
               </ul>
+              <Countdown targetDate={new Date('2025-01-31T23:59:59')} />
               <Link href="/book" className={styles.pricingButton}>
-                Book Now
+                Claim Offer
               </Link>
             </article>
           </div>

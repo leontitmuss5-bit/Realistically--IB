@@ -1,0 +1,78 @@
+.countdown {
+  margin-top: var(--space-8);
+  padding: var(--space-5);
+  background: rgba(245, 200, 66, 0.08);
+  border: 1px solid rgba(245, 200, 66, 0.3);
+  border-radius: 8px;
+}
+
+.countdownLabel {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wider);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-3);
+  text-align: center;
+  font-weight: var(--font-weight-medium);
+}
+
+.countdownTimer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.timeBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 45px;
+}
+
+.timeValue {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-light);
+  background: linear-gradient(135deg, #F5C842 0%, #FF8C42 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.timeUnit {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.separator {
+  font-size: 1.2rem;
+  color: rgba(245, 200, 66, 0.5);
+  font-weight: var(--font-weight-light);
+  margin-bottom: 12px;
+}
+
+.expired {
+  text-align: center;
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+@media (max-width: 480px) {
+  .timeBlock {
+    min-width: 35px;
+  }
+  
+  .timeValue {
+    font-size: 1.2rem;
+  }
+  
+  .separator {
+    font-size: 1rem;
+  }
+}

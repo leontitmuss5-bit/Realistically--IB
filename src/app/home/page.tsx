@@ -286,7 +286,7 @@ export default function HomePage() {
               <header className={styles.pricingHeader}>
                 <h3>Casual 1-on-1 Tutoring</h3>
                 <div className={styles.pricingAmount}>
-                  <span className={styles.priceValue}>$75</span>
+                  <span className={styles.priceValue}>$70</span>
                   <span className={styles.pricePeriod}>/ hour</span>
                 </div>
               </header>
@@ -306,10 +306,10 @@ export default function HomePage() {
                 <h3>IB Term Accelerator</h3>
                 <div className={styles.pricingAmount}>
                   <span className={styles.priceStrikethrough}>$600</span>
-                  <span className={styles.priceValue}>$550</span>
+                  <span className={styles.priceValue}>$500</span>
                   <span className={styles.pricePeriod}>/ term</span>
                 </div>
-                <span className={styles.priceSavings}>Save $50 — Introductory Offer</span>
+                <span className={styles.priceSavings}>Save $100 — Introductory Offer</span>
               </header>
               <div className={styles.pricingDivider} aria-hidden="true" />
               <p className={styles.pricingTagline}>Everything you need to excel in Year 11 or 12 IB.</p>
@@ -320,7 +320,7 @@ export default function HomePage() {
                 <li>Comprehensive subject notes</li>
                 <li>Exam-focused strategy and feedback</li>
               </ul>
-              <Countdown targetDate={new Date('2025-01-31T23:59:59')} />
+              <Countdown targetDate={new Date('2026-02-01T23:59:59')} />
               <Link href="/book" className={styles.pricingButton}>
                 Claim Offer
               </Link>

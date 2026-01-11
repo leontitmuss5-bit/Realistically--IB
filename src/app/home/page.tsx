@@ -247,6 +247,61 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* How It Works Section */}
+      <section id="how-it-works" className={styles.howItWorksSection} aria-labelledby="how-it-works-heading">
+        <div className="container">
+          <header className={styles.sectionHeader}>
+            <span className={styles.sectionTag}>The Process</span>
+            <h2 id="how-it-works-heading">
+              How It<br />
+              <span className={styles.gradientText}>Works</span>
+            </h2>
+          </header>
+          <div className={styles.stepsGrid}>
+            <article className={styles.stepCard}>
+              <span className={styles.stepNumber}>01</span>
+              <h3>Book a Session</h3>
+              <p>
+                Choose a 1-on-1 tutoring session, or IB Accelerator session at a time that works for you. 
+                Sessions run for one hour over Zoom with one of our tutors — William or Patrick.
+              </p>
+            </article>
+            <article className={styles.stepCard}>
+              <span className={styles.stepNumber}>02</span>
+              <h3>Get Personalised Support</h3>
+              <p>
+                Your session is fully flexible. We&apos;ll help with whatever you need most, whether that&apos;s 
+                understanding content, structuring assignments, exam prep, or study strategies.
+              </p>
+            </article>
+            <article className={styles.stepCard}>
+              <span className={styles.stepNumber}>03</span>
+              <h3>Join the Session</h3>
+              <p>
+                Before your session, we&apos;ll send through payment details and the Zoom link. 
+                Once that&apos;s sorted, you&apos;re good to go.
+              </p>
+            </article>
+            <article className={styles.stepCard}>
+              <span className={styles.stepNumber}>04</span>
+              <h3>Level Up If You Want</h3>
+              <p>
+                If you enjoy the session, you can move into our IB Accelerator Plan — 10 weekly sessions, 
+                exclusive resources we&apos;ve created, and a free planning session to help you map out the year and stay ahead.
+              </p>
+            </article>
+          </div>
+          <div className={styles.sessionStructure}>
+            <h3>Session Structure</h3>
+            <p>
+              Our tutoring is structured to be flexible and tailored to each student. Sessions are run 1-on-1 over Zoom 
+              and last one hour, with a focus on whatever the student needs most at the time — whether that&apos;s understanding 
+              content, working through assignments, exam preparation, or improving study strategies.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Subjects Section */}
       <section id="subjects" className={styles.subjectsSection} aria-labelledby="subjects-heading">
         <div className="container">

@@ -76,7 +76,6 @@ const SUBJECTS = [
   { icon: '📊', level: 'AI SL', name: 'Mathematics AI', description: 'Applications focus, statistics, modeling' },
   { icon: '∫', level: 'AA SL', name: 'Mathematics AA', description: 'Analysis approach, calculus, pure mathematics' },
   { icon: '🏛️', level: 'SL', name: 'Latin', description: 'Translation, literature, classical understanding' },
-  { icon: '🇪🇸', level: 'Ab Initio', name: 'Spanish', description: 'Beginner to proficient, oral & written skills' },
   { icon: '🔬', level: 'SL', name: 'Biology', description: 'Core concepts, data analysis, practical skills' },
 ];
 

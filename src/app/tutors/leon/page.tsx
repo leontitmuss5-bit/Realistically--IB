@@ -29,7 +29,6 @@ const SUBJECTS = [
   { icon: '📖', name: 'English Language & Literature HL' },
   { icon: '⚽', name: 'Sports, Health & Exercise Science HL' },
   { icon: '🔬', name: 'Biology SL' },
-  { icon: '🇪🇸', name: 'Spanish Ab Initio' },
   { icon: '🌍', name: 'Geography HL' },
   { icon: '📊', name: 'Mathematics AA SL' },
 ];
